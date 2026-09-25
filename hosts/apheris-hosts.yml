@@ -1,0 +1,78 @@
+generated: '2026-09-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 4
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - other
+  - security
+  - website
+hosts:
+- host: apheris.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: apheris.com
+  role: other
+  relation: own
+- host: api.apheris.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: apheris.com
+  role: api
+  relation: own
+- host: clarity.com
+  found_by:
+  - pointer
+  types:
+  - Security
+  serves: []
+  registrable_domain: clarity.com
+  role: security
+  relation: other-domain
+- host: trust.apheris.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TrustCenter
+  serves: []
+  platform: app.safebase.io
+  registrable_domain: apheris.com
+  role: other
+  relation: own
+- host: www.apheris.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - PrivacyPolicy
+  - Documentation
+  - GettingStarted
+  - Website
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: apheris.com
+  role: website
+  relation: own

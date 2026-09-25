@@ -1,0 +1,7 @@
+generated: 2026-09-25
+method: derived
+source: "mcp/apheris-mcp.yml"
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived

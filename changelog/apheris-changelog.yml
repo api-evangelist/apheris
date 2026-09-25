@@ -1,0 +1,44 @@
+generated: '2026-09-25'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.apheris.com/docs/hub/release-notes/release-notes.html
+sources:
+- https://www.apheris.com/docs/hub/release-notes/release-notes.html
+entries:
+- breaking: false
+  highlights:
+  - The Apheris Hub 1.4.13 patch release improves the troubleshooting documentation.
+  date: '2026-09-22'
+- breaking: false
+  highlights:
+  - The Apheris Hub 1.4.12 patch release adds the ability to download prediction request archives from both the Hub UI and the CLI.
+  - 'Prediction Archive Download : Completed prediction requests can now be downloaded as a full archive from the Hub.'
+  date: '2026-09-17'
+- breaking: false
+  highlights:
+  - The Apheris Hub 1.4.11 patch release improves the reliability of benchmarks and predictions for larger and more complex structures.
+  - Benchmarks and predictions involving complexes with symmetric ligands, such as heterodimers and ternary complexes, could take many hours to
+    finish or appear to never complete while their results were being calculated. These predictions now complete reliably.
+  - Retrying a failed benchmark structure upload that had previously failed could add duplicate structures or leave structures that could not
+    be removed, sometimes forcing you to recreate the whole benchmark. Structure uploads can now be safely retried.
+  - Structures containing a ligand named LIG could fail with a valence error during prediction or benchmarking. These structures now run correctly.
+  date: '2026-09-14'
+- breaking: false
+  highlights:
+  - The Apheris Hub 1.4.10 patch release makes MSA generation failures easier to diagnose by logging the outgoing request payloads sent to the
+    NVIDIA NIM MSA provider.
+  date: '2026-08-25'
+- breaking: false
+  highlights:
+  - The Apheris Hub 1.4.9 patch release overhauls MSA handling for predict, benchmark, and fine-tuning workflows with proper chain-level matching
+    and multi-asset support.
+  - It also fixes result download failures on multi-sample Boltz-2 predictions and resolves fine-tuning structure upload issues.
+  date: '2026-08-21'
+- breaking: false
+  highlights:
+  - The Apheris Hub 1.4.8 patch release adds a CUDA driver compatibility check for Docker deployments.
+  - It fixes an issue where benchmark jobs could fail when the model was busy processing other requests.
+  date: '2026-07-28'
+current_version: 1.4.13
+note: 'Versioning scheme follows semantic versioning: major.minor.patch.'
+docs: https://www.apheris.com/docs/hub/release-notes/release-notes.html

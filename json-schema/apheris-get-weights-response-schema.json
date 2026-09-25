@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apheris/main/json-schema/apheris-get-weights-response-schema.json",
+  "title": "GetWeightsResponse",
+  "x-generated": "2026-09-25",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/apheris-openapi-generated.yml#/components/schemas/GetWeightsResponse",
+  "type": "object",
+  "properties": {
+    "available_weights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "model_type": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "model_scope": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mounted_path": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

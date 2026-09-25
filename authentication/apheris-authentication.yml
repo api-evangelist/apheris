@@ -1,0 +1,18 @@
+generated: '2026-09-25'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.apheris.com/docs/hub/authentication-setup.html
+sources:
+- https://www.apheris.com/docs/hub/authentication-setup.html
+- https://www.apheris.com/docs/hub/nim-msa-server-setup.html
+description: Authentication schemes for Apheris Hub
+schemes:
+- type: oauth2
+  name: oidc
+  evidence: This guide provides the steps required to configure your OAuth 2.0 / OpenID Connect (OIDC) identity provider so the Apheris Hub can
+    validate JWTs and support multi-user deployments.
+  flows:
+  - authorization_code
+  how_to_obtain: Configure an OIDC‑compatible identity provider (e.g., Auth0, Microsoft Entra, ForgeRock, Dex) and set the required hub.auth fields
+    (domain, audience, clientId, etc.) in the Hub configuration.
+docs: https://www.apheris.com/docs/hub/authentication-setup.html

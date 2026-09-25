@@ -1,0 +1,256 @@
+openapi: 3.1.0
+info:
+  title: Apheris API
+  version: '2026-09-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-25: 9 operation(s) read from 5 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Apheris has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 6
+    pages-with-code: 3
+    pages-read: 5
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.apheris.com/docs/hub/apherisfold-application.html
+  - https://www.apheris.com/docs/hub/nim-msa-server-setup.html
+  - https://www.apheris.com/docs/hub/troubleshooting.html
+  - https://www.apheris.com/docs/hub/external-async-wrapper-kubernetes.html
+  - https://www.apheris.com/docs/hub/external-async-wrapper-reference-implementation.html
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Api
+      summary: GET /
+      x-source: https://www.apheris.com/docs/hub/apherisfold-application.html
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost:<port>/weights\n You should see your custom weights listed in the response. \n Using Custom Weights \U0001F517\
+          \ \n Once configured, custom weights appear in the Hub UI alongside default weights. When creating a prediction: \n Navigate to the\
+          \ Predict page \n Select your model (OpenFold3 or Boltz-2) \n Select your custom weight version from the dropdown \n When using the\
+          \ API, specify the custom"
+  /api/v1/predict-async:
+    post:
+      operationId: post_api_v1_predict_async
+      tags:
+      - Api
+      summary: External Async Wrapper Reference Implementation - Apheris Hub Documentation
+      x-source: https://www.apheris.com/docs/hub/external-async-wrapper-reference-implementation.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1PredictAsyncRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1PredictAsyncResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/predict-async/{jobid}/{id}:
+    get:
+      operationId: get_api_v1_predict_async_jobid_id
+      tags:
+      - Api
+      summary: External Async Wrapper Reference Implementation - Apheris Hub Documentation
+      x-source: https://www.apheris.com/docs/hub/external-async-wrapper-reference-implementation.html
+      parameters:
+      - name: jobid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1PredictAsyncJobidIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+  /results/{uuid}:
+    get:
+      operationId: get_results_uuid
+      tags:
+      - Results
+      summary: GET /results/{uuid} returns a complete results.predictions array.
+      x-source: https://www.apheris.com/docs/hub/external-async-wrapper-kubernetes.html
+      parameters:
+      - name: uuid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /schema:
+    get:
+      operationId: get_schema
+      tags:
+      - Schema
+      summary: GET /schema works on the customer wrapper URL.
+      x-source: https://www.apheris.com/docs/hub/external-async-wrapper-kubernetes.html
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /ticket:
+    post:
+      operationId: post_ticket
+      tags:
+      - Ticket
+      summary: POST /ticket returns 200 or 202 with a non-empty uuid.
+      x-source: https://www.apheris.com/docs/hub/external-async-wrapper-kubernetes.html
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /ticket/{uuid}:
+    get:
+      operationId: get_ticket_uuid
+      tags:
+      - Ticket
+      summary: GET /ticket/{uuid} returns only PENDING, RUNNING, COMPLETED, or FAILED.
+      x-source: https://www.apheris.com/docs/hub/external-async-wrapper-kubernetes.html
+      parameters:
+      - name: uuid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/health/ready:
+    get:
+      operationId: get_v1_health_ready
+      tags:
+      - Health
+      summary: GET /v1/health/ready
+      x-source: https://www.apheris.com/docs/hub/nim-msa-server-setup.html
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost:8080/v1/health/ready\n Connecting the Hub to the MSA Server \U0001F517 \n Once the NIM MSA server is running,\
+          \ configure the Hub to use it as an MSA provider. Set the URL to the address of the server on port 8080. \n For Docker deployments ,\
+          \ see MSA Server Configuration . \n For Kubernetes deployments , see MSA Server Configuration . \n Managing the Service \U0001F517 \n\
+          \ Stop the services: \n docker c"
+  /weights:
+    get:
+      operationId: get_weights
+      tags:
+      - Weights
+      summary: GET /weights
+      x-source: https://www.apheris.com/docs/hub/apherisfold-application.html
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetWeightsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost:8000/weights\n Expected response: \n { \n \"available_weights\" : [ \n ... \n { \n \"model_type\" : \"\
+          openfold3\" , \n \"version\" : \"3.0.0-federated\" , \n \"description\" : \"OpenFold Federated weights\" , \n \"model_scope\" : [ \"\
+          inference\" ], \n \"mounted_path\" : \"/weights/openfold3/fed\" \n }, \n { \n \"model_type\" : \"openfold3\" , \n \"version\" : \"3.0.0-fine-tuned\"\
+          \ , \n \"description\" : \"OpenFold Fine-Tune"
+components:
+  schemas:
+    PostApiV1PredictAsyncRequest:
+      type: object
+      properties:
+        requestParams:
+          type: object
+        modelParams:
+          type: object
+        inputPath:
+          type: string
+        modelName:
+          type: string
+        weightVersion:
+          type: string
+      required:
+      - requestParams
+      - modelParams
+      - inputPath
+      - modelName
+      - weightVersion
+    PostApiV1PredictAsyncResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+        jobStatus:
+          type: string
+    GetApiV1PredictAsyncJobidIdResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+        jobStatus:
+          type: string
+        outputPath:
+          type: string
+        predictions:
+          type: array
+    GetWeightsResponse:
+      type: object
+      properties:
+        available_weights:
+          type: array
+          items:
+            type: object
+            properties:
+              model_type:
+                type: string
+              version:
+                type: string
+              description:
+                type: string
+              model_scope:
+                type: array
+                items:
+                  type: string
+              mounted_path:
+                type: string
+tags:
+- name: Api
+- name: Health
+- name: Results
+- name: Schema
+- name: Ticket
+- name: Weights

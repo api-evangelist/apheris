@@ -1,23 +1,113 @@
 aid: apheris
+
 name: Apheris
-description: 'Apheris is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Apheris provides federated AI platforms for drug discovery, enabling superior models through federated data networks. The company
+  focuses on leveraging distributed datasets to train high‑performing predictive models for pharmaceutical research, offering tools that integrate
+  securely across institutions.
+
 url: https://raw.githubusercontent.com/api-evangelist/apheris/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- AI
+- DrugDiscovery
+- FederatedLearning
+- Biotechnology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/apheris-clarity-security.txt
+- type: Spectral
+  url: rules/apheris-rules.yml
+- type: JSONLD
+  url: json-ld/apheris-context.jsonld
+- type: Vocabulary
+  url: vocabulary/apheris-vocabulary.yml
+- type: DataModel
+  url: data-model/apheris-data-model.yml
+- type: ChangeLog
+  url: changelog/apheris-changelog.yml
+- type: Security
+  url: https://clarity.com/vdp
+- type: Authentication
+  url: authentication/apheris-authentication.yml
+- type: Conformance
+  url: conformance/apheris-conformance.yml
+- type: WellKnown
+  url: well-known/apheris-well-known.yml
+- type: Hosts
+  url: hosts/apheris-hosts.yml
+- type: Vendors
+  url: vendors/apheris-vendors.yml
+- type: TrustCenter
+  url: https://trust.apheris.com/
+- type: PrivacyPolicy
+  url: https://www.apheris.com/privacy-policy
+- type: Documentation
+  url: https://www.apheris.com/docs
+- type: GettingStarted
+  url: https://www.apheris.com/docs/hub/nim-msa-server-setup.html
+- type: VulnerabilityDisclosure
+  url: security/apheris-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/apheris-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/apheris-stock
+  url: https://www.apheris.com/
+
+apis:
+- name: ApherisFold API
+  description: API reference for ApherisFold platform
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  aid: apheris:apherisfold-api
+- aid: apheris:apheris-api
+  name: Apheris API
+  description: 'Apheris API as documented publicly: 9 operations. Contract generated from the documentation by API Evangelist (2026-09-25); not
+
+    the provider''s own document.'
+  humanURL: https://www.apheris.com/docs/hub/apherisfold-application.html
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/apheris-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/apheris-get-weights-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-request-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 19
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

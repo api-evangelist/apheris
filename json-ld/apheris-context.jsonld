@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@vocab": "https://apheris.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "apheris": "https://apheris.com/schema#",
+    "PostApiV1PredictAsyncRequest": "apheris:PostApiV1PredictAsyncRequest",
+    "requestParams": {
+      "@id": "apheris:requestParams"
+    },
+    "modelParams": {
+      "@id": "apheris:modelParams"
+    },
+    "inputPath": {
+      "@id": "apheris:inputPath",
+      "@type": "xsd:string"
+    },
+    "modelName": {
+      "@id": "apheris:modelName",
+      "@type": "xsd:string"
+    },
+    "weightVersion": {
+      "@id": "apheris:weightVersion",
+      "@type": "xsd:string"
+    },
+    "PostApiV1PredictAsyncResponse": "apheris:PostApiV1PredictAsyncResponse",
+    "jobId": {
+      "@id": "apheris:jobId",
+      "@type": "xsd:string"
+    },
+    "jobStatus": {
+      "@id": "apheris:jobStatus",
+      "@type": "xsd:string"
+    },
+    "GetApiV1PredictAsyncJobidIdResponse": "apheris:GetApiV1PredictAsyncJobidIdResponse",
+    "outputPath": {
+      "@id": "apheris:outputPath",
+      "@type": "xsd:string"
+    },
+    "predictions": {
+      "@id": "apheris:predictions",
+      "@container": "@list"
+    },
+    "GetWeightsResponse": "apheris:GetWeightsResponse",
+    "available_weights": {
+      "@id": "apheris:available_weights",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Apheris API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Apheris's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-25) from openapi/_ae-authored/apheris-openapi-generated.yml.",
+  "dcterms:created": "2026-09-25",
+  "dcterms:source": [
+    "openapi/_ae-authored/apheris-openapi-generated.yml"
+  ]
+}
