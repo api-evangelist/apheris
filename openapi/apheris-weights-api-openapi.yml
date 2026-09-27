@@ -1,0 +1,65 @@
+openapi: 3.2.0
+info:
+  title: Apheris Weights API
+  version: '2026-09-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-25: 9 operation(s) read from 5 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Apheris has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 6
+    pages-with-code: 3
+    pages-read: 5
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.apheris.com/docs/hub/apherisfold-application.html
+  - https://www.apheris.com/docs/hub/nim-msa-server-setup.html
+  - https://www.apheris.com/docs/hub/troubleshooting.html
+  - https://www.apheris.com/docs/hub/external-async-wrapper-kubernetes.html
+  - https://www.apheris.com/docs/hub/external-async-wrapper-reference-implementation.html
+tags:
+- name: Weights
+paths:
+  /weights:
+    get:
+      operationId: get_weights
+      tags:
+      - Weights
+      summary: GET /weights
+      x-source: https://www.apheris.com/docs/hub/apherisfold-application.html
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetWeightsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost:8000/weights\n Expected response: \n { \n \"available_weights\" : [ \n ... \n { \n \"model_type\" : \"openfold3\" , \n \"version\" : \"3.0.0-federated\" , \n \"description\" : \"OpenFold Federated weights\" , \n \"model_scope\" : [ \"inference\" ], \n \"mounted_path\" : \"/weights/openfold3/fed\" \n }, \n { \n \"model_type\" : \"openfold3\" , \n \"version\" : \"3.0.0-fine-tuned\" , \n \"description\" : \"OpenFold Fine-Tune"
+components:
+  schemas:
+    GetWeightsResponse:
+      type: object
+      properties:
+        available_weights:
+          type: array
+          items:
+            type: object
+            properties:
+              model_type:
+                type: string
+              version:
+                type: string
+              description:
+                type: string
+              model_scope:
+                type: array
+                items:
+                  type: string
+              mounted_path:
+                type: string

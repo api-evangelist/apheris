@@ -79,16 +79,15 @@ apis:
   description: API reference for ApherisFold platform
   humanURL: https://www.apheris.com/docs/hub/hub-api.html
   aid: apheris:apherisfold-api
-- aid: apheris:apheris-api
-  name: Apheris API
-  description: 'Apheris API as documented publicly: 9 operations. Contract generated from the documentation by API Evangelist (2026-09-25); not
-
-    the provider''s own document.'
-  humanURL: https://www.apheris.com/docs/hub/apherisfold-application.html
+- aid: apheris:apheris-apheris-api-api
+  name: Apheris Apheris API
+  description: The Apheris API API from Apheris — 1 operation(s) for apheris api.
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  tags:
+  - Apheris API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/apheris-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/apheris-apheris-api-api-openapi.yml
   - type: JSONSchema
     url: json-schema/apheris-get-weights-response-schema.json
   - type: JSONSchema
@@ -97,7 +96,108 @@ apis:
     url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
   - type: JSONSchema
     url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
-
+- aid: apheris:apheris-health-api
+  name: Apheris Health API
+  description: The Health API from Apheris — 1 operation(s) for health.
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/apheris-health-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apheris-get-weights-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-request-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
+- aid: apheris:apheris-predict-async-api
+  name: Apheris Predict Async API
+  description: The Predict Async API from Apheris — 2 operation(s) for predict async.
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  tags:
+  - Predict Async
+  properties:
+  - type: OpenAPI
+    url: openapi/apheris-predict-async-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apheris-get-weights-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-request-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
+- aid: apheris:apheris-results-api
+  name: Apheris Results API
+  description: The Results API from Apheris — 1 operation(s) for results.
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  tags:
+  - Results
+  properties:
+  - type: OpenAPI
+    url: openapi/apheris-results-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apheris-get-weights-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-request-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
+- aid: apheris:apheris-schema-api
+  name: Apheris Schema API
+  description: The Schema API from Apheris — 1 operation(s) for schema.
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  tags:
+  - Schema
+  properties:
+  - type: OpenAPI
+    url: openapi/apheris-schema-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apheris-get-weights-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-request-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
+- aid: apheris:apheris-ticket-api
+  name: Apheris Ticket API
+  description: The Ticket API from Apheris — 2 operation(s) for ticket.
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  tags:
+  - Ticket
+  properties:
+  - type: OpenAPI
+    url: openapi/apheris-ticket-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apheris-get-weights-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-request-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
+- aid: apheris:apheris-weights-api
+  name: Apheris Weights API
+  description: The Weights API from Apheris — 1 operation(s) for weights.
+  humanURL: https://www.apheris.com/docs/hub/hub-api.html
+  tags:
+  - Weights
+  properties:
+  - type: OpenAPI
+    url: openapi/apheris-weights-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apheris-get-weights-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-request-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
 x-coverage:
   state: none
   reason: no-developer-program

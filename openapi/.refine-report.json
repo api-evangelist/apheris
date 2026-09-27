@@ -1,0 +1,29 @@
+{
+  "provider": "apheris",
+  "sources": [
+    "_ae-authored/apheris-openapi-generated.yml"
+  ],
+  "outputs": [
+    "apheris-apheris-api-api-openapi.yml",
+    "apheris-health-api-openapi.yml",
+    "apheris-predict-async-api-openapi.yml",
+    "apheris-results-api-openapi.yml",
+    "apheris-schema-api-openapi.yml",
+    "apheris-ticket-api-openapi.yml",
+    "apheris-weights-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apheris-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apheris-openapi-generated.yml: tagged paths GET / -> Apheris API",
+    "apheris-openapi-generated.yml: tagged paths POST /api/v1/predict-async -> Predict Async",
+    "apheris-openapi-generated.yml: tagged paths GET /api/v1/predict-async/{jobid}/{id} -> Predict Async",
+    "apheris-openapi-generated.yml: declared missing tag: Apheris API",
+    "apheris-openapi-generated.yml: declared missing tag: Predict Async",
+    "apis.yml register: written (+7 apis, 8 total)"
+  ],
+  "skipped": []
+}
