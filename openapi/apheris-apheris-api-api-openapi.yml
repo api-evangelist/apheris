@@ -1,0 +1,39 @@
+openapi: 3.2.0
+info:
+  title: Apheris API
+  version: '2026-09-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-25: 9 operation(s) read from 5 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Apheris has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 6
+    pages-with-code: 3
+    pages-read: 5
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.apheris.com/docs/hub/apherisfold-application.html
+  - https://www.apheris.com/docs/hub/nim-msa-server-setup.html
+  - https://www.apheris.com/docs/hub/troubleshooting.html
+  - https://www.apheris.com/docs/hub/external-async-wrapper-kubernetes.html
+  - https://www.apheris.com/docs/hub/external-async-wrapper-reference-implementation.html
+tags:
+- name: Apheris API
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Apheris API
+      summary: GET /
+      x-source: https://www.apheris.com/docs/hub/apherisfold-application.html
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl http://localhost:<port>/weights\n You should see your custom weights listed in the response. \n Using Custom Weights \U0001F517 \n Once configured, custom weights appear in the Hub UI alongside default weights. When creating a prediction: \n Navigate to the Predict page \n Select your model (OpenFold3 or Boltz-2) \n Select your custom weight version from the dropdown \n When using the API, specify the custom"
