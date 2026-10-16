@@ -75,6 +75,24 @@ paths:
         collapsed_from: 2 example path(s) differing only at id
 components:
   schemas:
+    GetApiV1PredictAsyncJobidIdResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+        jobStatus:
+          type: string
+        outputPath:
+          type: string
+        predictions:
+          type: array
+    PostApiV1PredictAsyncResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+        jobStatus:
+          type: string
     PostApiV1PredictAsyncRequest:
       type: object
       properties:
@@ -94,21 +112,3 @@ components:
       - inputPath
       - modelName
       - weightVersion
-    GetApiV1PredictAsyncJobidIdResponse:
-      type: object
-      properties:
-        jobId:
-          type: string
-        jobStatus:
-          type: string
-        outputPath:
-          type: string
-        predictions:
-          type: array
-    PostApiV1PredictAsyncResponse:
-      type: object
-      properties:
-        jobId:
-          type: string
-        jobStatus:
-          type: string

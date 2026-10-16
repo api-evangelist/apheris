@@ -23,7 +23,15 @@
     "apheris-openapi-generated.yml: tagged paths GET /api/v1/predict-async/{jobid}/{id} -> Predict Async",
     "apheris-openapi-generated.yml: declared missing tag: Apheris API",
     "apheris-openapi-generated.yml: declared missing tag: Predict Async",
-    "apis.yml register: written (+7 apis, 8 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "apheris-apheris-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apheris-health-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apheris-predict-async-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apheris-results-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apheris-schema-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apheris-ticket-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apheris-weights-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

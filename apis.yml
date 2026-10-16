@@ -204,6 +204,13 @@ apis:
     url: json-schema/apheris-get-api-v1-predict-async-jobid-id-response-schema.json
   - type: JSONSchema
     url: json-schema/apheris-post-api-v1-predict-async-response-schema.json
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
 x-enrichment:
   date: '2026-09-25'
   status: enriched
