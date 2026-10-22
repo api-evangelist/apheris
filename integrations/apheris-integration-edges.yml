@@ -2,6 +2,9 @@ generated: '2026-10-13'
 method: searched
 checked:
 - https://aws.amazon.com/marketplace/
+- https://www.ga4gh.org/community/organizational-members/
+- https://www.ga4gh.org/our-products/
+- https://www.ga4gh.org/our-products/implementations/
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -19,3 +22,35 @@ edges:
   seller_name: Apheris
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: GA4GH (Global Alliance for Genomics and Health)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.ga4gh.org/community/organizational-members/
+  category: genomic data-sharing standards alliance membership
+  contract_reference:
+    register: GA4GH organisational members (ga4gh.org/community/organizational-members/)
+    standard: GA4GH standards (htsget, DRS, TES, WES, Beacon, Passports, refget, VRS, Phenopackets)
+    spec_file: null
+    role: ga4gh-organisational-member
+    registered_name: Apheris
+    register_country: Germany
+    register_member_type: Companies Information Technology
+    register_id: https://www.apheris.com/
+    matched_domain: apheris.com
+    matched_by: domain
+    signal_note: 'participation only: organisational membership of the Global Alliance for Genomics and Health (the
+      member list links each member''s website, the link is the identity); GA4GH runs no conformance certification,
+      listing is not conformance'
+    detected_by: sweep-ga4gh-genomics-standards.py
+    detected: '2026-10-22'
+    other_registrations: []
+  detected_by: sweep-ga4gh-genomics-standards.py
+  first_seen: '2026-10-22'
+source:
+- https://www.ga4gh.org/community/organizational-members/
+- https://www.ga4gh.org/our-products/implementations/
+- https://www.ga4gh.org/our-products/
